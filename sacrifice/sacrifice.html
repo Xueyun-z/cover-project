@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sacrifice | Yoko Ono Cover</title>
+  <link rel="stylesheet" href="sacrifice.css">
+</head>
+<body>
+  <canvas id="sacrificeCanvas"></canvas>
+
+  <div id="instructionOverlay">
+    <p id="instructionText">Touch the page as softly as you can.</p>
+    <label id="consentLabel">
+      <input type="checkbox" id="linger">
+      Let my traces linger for others
+    </label>
+    <p id="saveNotice" class="hidden">Your traces will remain.</p>
+  </div>
+  <div id="toolPanel">
+   
+
+  <div class="controls">
+    <label>Choose color:
+      <input type="color" id="colorPicker" value="#d4d6d7">
+    </label>
+    <label>Brush size:
+      <input type="range" id="brushSize" min="5" max="80" value="30">
+    </label>
+  </div>
+   <p id="transitionHint" >Press Enter to receive your Souvenir.</p>
+
+  <div class="text-message">
+    <input type="text" id="userText" placeholder="Type a message to the world…">
+    <button id="sendText">Send</button>
+  </div>
+</div>
+
+ <div id="transitionOverlay"></div>
+  <script src="sacrifice.js"></script>
+ 
+
+</body>
+</html>
+

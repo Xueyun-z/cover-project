@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A Page To Be Completed by You | Yoko Ono Cover</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="consent">
+    <p>This page needs your light.</p>
+    <p>Will you participate?</p>
+    <button id="yes">YES</button>
+    <button id="imagine">I prefer to imagine.</button>
+  </div>
+
+  <script>
+    const consentDiv = document.getElementById("consent");
+
+    function resetConsent() {
+      consentDiv.innerHTML = `
+        <p>This page needs your light.</p>
+        <p>Will you participate?</p>
+        <button id="yes">YES</button>
+        <button id="imagine">I prefer to imagine.</button>
+      `;
+
+      document.getElementById("yes").onclick = () => {
+        window.location.href = "bag/bag.html"; // ✅ now properly redirects
+      };
+
+      document.getElementById("imagine").onclick = () => {
+        consentDiv.innerHTML = `
+          <p>You have already completed it.</p>
+          <button id="goBack">Go back</button>
+        `;
+        document.getElementById("goBack").onclick = resetConsent;
+      };
+    }
+
+    resetConsent();
+  </script>
+</body>
+</html>

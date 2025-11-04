@@ -1,0 +1,136 @@
+body {
+  background-color: #57395f;
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #d4d6d7;
+}
+
+#sacrificeCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #57395f;
+  cursor: crosshair;
+}
+
+#instructionOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  transition: opacity 2s ease-in-out;
+}
+
+#instructionText {
+  font-size: 1.4em;
+  margin-bottom: 1em;
+}
+
+#consentLabel {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  display: block;
+  margin-top: 1em;
+  font-size: 1em;
+}
+
+#saveNotice {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  font-size: 0.9em;
+  margin-top: 0.5em;
+}
+
+.hidden {
+  display: none;
+}
+#toolPanel {
+    position:absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%);
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  margin-top: 2em;
+  pointer-events: none; /* prevents accidental clicks while hidden */
+  z-index: 10;
+}
+
+#toolPanel.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.controls label {
+  margin: 0 1em;
+  font-size: 0.9em;
+}
+
+input[type="color"],
+input[type="range"] {
+  margin-left: 0.5em;
+}
+
+.text-message {
+  margin-top: 1em;
+}
+
+#userText {
+  background: none;
+  border: 1px solid #d4d6d7;
+  color: #d4d6d7;
+  padding: 0.3em 0.6em;
+  width: 220px;
+}
+
+#sendText {
+  background: none;
+  border: 1px solid #d4d6d7;
+  color: #d4d6d7;
+  padding: 0.3em 0.6em;
+  margin-left: 0.5em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#sendText:hover {
+  background: rgba(212, 214, 215, 0.2);
+}
+
+#transitionOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #57395f;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 999; /* above everything */
+}
+
+#transitionOverlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+#transitionHint {
+  text-align: center;
+  margin-top: 2em;
+  font-size: 1em;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  color: #d4d6d7;
+  position:relative;
+  z-index:20;
+}
+
+#transitionHint.visible {
+  opacity: 1;
+}
+

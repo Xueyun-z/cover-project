@@ -1,0 +1,43 @@
+body {
+  background-color: #10071c;
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #d4d6d7;
+}
+
+#souvenirCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+#overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+}
+
+#overlay p {
+  font-size: 1.4em;
+  margin-bottom: 1em;
+  opacity: 0.8;
+}
+
+#clear {
+  background: none;
+  border: 1px solid #d4d6d7;
+  color: #d4d6d7;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#clear:hover {
+  background: rgba(212,214,215,0.2);
+}

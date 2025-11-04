@@ -1,0 +1,82 @@
+body {
+  background-color: #57395f;
+  color: #d4d6d7;
+  font-family: 'Helvetica Neue', sans-serif;
+  text-align: center;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  animation: pulse 8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { background-color: #57395f; }
+  50% { background-color: #5e3f66; }
+}
+
+p, button {
+  font-size: 1.3em;
+  margin: 0.6em;
+}
+
+button {
+  background: none;
+  border: 1px solid #d4d6d7;
+  color: #d4d6d7;
+  padding: 0.6em 1.2em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: rgba(212, 214, 215, 0.2);
+}
+
+.hidden {
+  display: none;
+}
+
+/* instruction text styling */
+#instructionArea {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+
+#instruction {
+  font-size: 2em;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  color: #d4d6d7;
+  line-height: 1.4em;
+}
+body.breathe-in {
+  background-color: #6a4b71;   /* slightly lighter lavender */
+  transition: background-color 2s ease-in-out;
+}
+
+body.breathe-out {
+  background-color: #57395f;   /* original base color */
+  transition: background-color 2s ease-in-out;
+}
+#fadeOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  animation: fadeOut 2s ease forwards;
+  z-index: 10;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; pointer-events: none; }
+}
+
